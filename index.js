@@ -288,6 +288,12 @@ const driver = neo4j.driver(
     neo4j.auth.basic("neo4j", "admin123")
 );
 
+
+// const driver = neo4j.driver(uri, neo4j.auth.basic(user, password), {
+//   encrypted: 'ENCRYPTION_ON',
+//   trustedCertificates: [path.join(__dirname, 'abc.pem')]
+// });
+
 const neoSchema = new Neo4jGraphQL({ typeDefs, driver });
 
 // const server = new ApolloServer({
